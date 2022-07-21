@@ -381,7 +381,7 @@ const remainingHours = (
   var now = new Date();
   let endDate = inputToDate(date);
   let offset = now.getTimezoneOffset();
-  let diferentialoffsetmili = (offset + 60) * 60 * 1000;
+  let diferentialoffsetmili = (offset + 60) * 60 * 1000; // + 60 to take account to Portugal GMT+01 time
   if (typeof hours === "string") hours = parseInt(hours);
   if (typeof minutes === "string") minutes = parseInt(minutes);
   endDate.setHours(hours);
